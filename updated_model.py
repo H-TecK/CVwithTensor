@@ -21,6 +21,7 @@ ds_train = ds_train.batch(BATCH_SIZE)
 ds_test = ds_test.batch(BATCH_SIZE)
 # Define the model
 model = tf.keras.models.Sequential([tf.keras.layers.Flatten(),
+                                    tf.keras.layers.Dense(128, activation=tf.nn.relu),
                                     tf.keras.layers.Dense(64, activation=tf.nn.relu),
                                     tf.keras.layers.Dense(10, activation=tf.nn.softmax)])
 # Compile data
